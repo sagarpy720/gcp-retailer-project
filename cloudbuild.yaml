@@ -20,7 +20,7 @@ substitutions:
   _DAGS_DIRECTORY: "workflows/"
 substitutions:
   _DAGS_DIRECTORY: "workflows/"
-  _DAGS_BUCKET: "gs://us-central1-my-project-4f662af1-bucket"
+  _DAGS_BUCKET: "us-central1-my-project-4f662af1-bucket"
   _DATA_DIRECTORY: "data/"
 
   _DATA_DIRECTORY: "data/"
