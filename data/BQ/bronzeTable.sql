@@ -7,10 +7,9 @@ CREATE EXTERNAL TABLE IF NOT EXISTS `avd-databricks-demo.bronze_dataset.orders`(
 )
 OPTIONS (
   format = 'JSON',
-  uris = ['gs://datalake-project-bkt-19032025/landing/retailer-db/orders/*.json']
-); 
 
-   
+  uris = ['gs://datalake-project-bkt01042025/landing/retailer-db/orders/*.json']
+); 
 
 
 CREATE EXTERNAL TABLE IF NOT EXISTS `avd-databricks-demo.bronze_dataset.customers`
@@ -23,7 +22,7 @@ CREATE EXTERNAL TABLE IF NOT EXISTS `avd-databricks-demo.bronze_dataset.customer
 )
 OPTIONS (
     format = 'JSON',
-    uris = ['gs://datalake-project-bkt-19032025/landing/retailer-db/customers/*.json']
+    uris = ['gs://retailer-datalake-project-27032025/landing/retailer-db/customers/*.json']
 );
 
 CREATE EXTERNAL TABLE IF NOT EXISTS `avd-databricks-demo.bronze_dataset.products`
@@ -36,7 +35,7 @@ CREATE EXTERNAL TABLE IF NOT EXISTS `avd-databricks-demo.bronze_dataset.products
 )
 OPTIONS (
     format = 'JSON',
-    uris = ['gs://datalake-project-bkt-19032025/landing/retailer-db/products/*.json']
+    uris = ['gs://retailer-datalake-project-27032025/landing/retailer-db/products/*.json']
 );
 
 CREATE EXTERNAL TABLE IF NOT EXISTS `avd-databricks-demo.bronze_dataset.categories`
@@ -47,7 +46,7 @@ CREATE EXTERNAL TABLE IF NOT EXISTS `avd-databricks-demo.bronze_dataset.categori
 )
 OPTIONS (
     format = 'JSON',
-    uris = ['gs://datalake-project-bkt-19032025/landing/retailer-db/categories/*.json']
+    uris = ['gs://retailer-datalake-project-27032025/landing/retailer-db/categories/*.json']
 );
 
 CREATE EXTERNAL TABLE IF NOT EXISTS `avd-databricks-demo.bronze_dataset.order_items`
@@ -61,7 +60,7 @@ CREATE EXTERNAL TABLE IF NOT EXISTS `avd-databricks-demo.bronze_dataset.order_it
 )
 OPTIONS (
     format = 'JSON',
-    uris = ['gs://datalake-project-bkt-19032025/landing/retailer-db/order_items/*.json']
+    uris = ['gs://retailer-datalake-project-27032025/landing/retailer-db/order_items/*.json']
 );
 -------------------------------------------------------------------------------------------------------------
 -- Suppliers Table
@@ -78,7 +77,7 @@ CREATE EXTERNAL TABLE IF NOT EXISTS `avd-databricks-demo.bronze_dataset.supplier
 )
 OPTIONS (
   format = 'JSON',
-  uris = ['gs://datalake-project-bkt-19032025/landing/supplier-db/suppliers/*.json']
+  uris = ['gs://retailer-datalake-project-27032025/landing/supplier-db/suppliers/*.json']
 );
 
 -- Product Suppliers Table (Mapping suppliers to products)
@@ -90,7 +89,7 @@ CREATE EXTERNAL TABLE IF NOT EXISTS `avd-databricks-demo.bronze_dataset.product_
 )
 OPTIONS (
   format = 'JSON',
-  uris = ['gs://datalake-project-bkt-19032025/landing/supplier-db/product_suppliers/*.json']
+  uris = ['gs://retailer-datalake-project-27032025/landing/supplier-db/product_suppliers/*.json']
 );
 
 -------------------------------------------------------------------------------------------------------------
@@ -105,7 +104,7 @@ CREATE OR REPLACE EXTERNAL TABLE `avd-databricks-demo.bronze_dataset.customer_re
 )
 OPTIONS (
   format = 'PARQUET',
-  uris = ['gs://datalake-project-bkt-19032025/landing/customer_reviews/customer_reviews_*.parquet']
+  uris = ['gs://retailer-datalake-project-27032025/landing/customer_reviews/customer_reviews_*.parquet']
 );
 
 -------------------------------------------------------------------------------------------------------------
