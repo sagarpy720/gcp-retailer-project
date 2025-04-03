@@ -17,6 +17,8 @@ ARGS = {
     "retry_delay": timedelta(minutes=5)
 }
 
+
+
 # Define the parent DAG
 with DAG(
     dag_id="parent_dag",
@@ -25,6 +27,7 @@ with DAG(
     default_args=ARGS,
     tags=["parent", "orchestration", "etl"]
 ) as dag:
+    
 
     # Task to trigger PySpark DAG
     trigger_pyspark_dag = TriggerDagRunOperator(

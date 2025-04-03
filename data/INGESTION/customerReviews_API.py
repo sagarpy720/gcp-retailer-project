@@ -8,8 +8,8 @@ from google.cloud import storage
 # Initialize Spark Session
 spark = SparkSession.builder.appName("CustomerReviewsAPI").getOrCreate()
 
-# API Endpoint
-API_URL = "https://67e51d5418194932a5849592.mockapi.io/retailer/reviews"
+# ✅ API Endpoint
+API_URL = "https://67dcea18e00db03c40696053.mockapi.io/reviews"
 
 # Step 1: Fetch data from API
 response = requests.get(API_URL)
@@ -29,7 +29,7 @@ today = datetime.datetime.today().strftime('%Y%m%d')  # Format: YYYYMMDD
 
 # Step 4: Define File Paths with Date
 local_parquet_file = f"/tmp/customer_reviews_{today}.parquet"
-GCS_BUCKET = "retailer-datalake-project-27032025"
+GCS_BUCKET = "gs://datalake-project-bkt01042025"
 GCS_PATH = f"landing/customer_reviews/customer_reviews_{today}.parquet"
 
 # Step 5: Save Pandas DataFrame as Parquet Locally
