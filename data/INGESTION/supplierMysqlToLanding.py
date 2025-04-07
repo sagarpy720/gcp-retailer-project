@@ -178,6 +178,6 @@ for row in config_df.collect():
         db, src, table, load_type, watermark, _, targetpath = row
         move_existing_files_to_archive(table)
         extract_and_save_to_landing(table, load_type, watermark)
-        print(f"✅✅✅ 😁😁😁{table} done  😁😁😁 ✅✅✅ ")
+        print(f"✅✅🙌🙌🙌🙌🙌🙌 😁😁😁{table} done  🙌🙌🙌🙌🙌🙌😁😁😁 ✅✅.. ")
 save_logs_to_gcs()
 save_logs_to_bigquery()
