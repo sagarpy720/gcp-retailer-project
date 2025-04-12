@@ -18,7 +18,7 @@ options:
 
 substitutions:
   _DAGS_DIRECTORY: "workflows/"
-  _DAGS_BUCKET: "us-central1-my-airflow-envi-bdc42451-bucket"
+  _DAGS_BUCKET: " us-central1-retailer-pipeli-4e089ef9-bucket"
   _DATA_DIRECTORY: "data/"
 
 
